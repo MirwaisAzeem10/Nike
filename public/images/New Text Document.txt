@@ -1,0 +1,12 @@
+Walk
+
+- 1. Adjust Svg Size and Set Text Alignment 
+- 2. Adjust Svg Size, Set Text Alignment and make skip/next button
+     in theme color in this section
+- 3. Adjust Svg Size and Set Text Alignment 
+
+Sign in
+
+- Adjust Sign in screen spacing
+- Email/Password Field Typing Ui Error
+- Adjust Spacing Between Icon and Connent with (Google, Facebook)
