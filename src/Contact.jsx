@@ -7,6 +7,7 @@ const Contact = () => {
         paddingLeft: "100px",
         paddingRight: "100px",
         marginBottom: "20px",
+        paddingTop: "30px",
       }}
     >
       <div class="mb-6">

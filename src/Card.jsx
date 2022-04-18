@@ -32,7 +32,10 @@ function Card() {
     },
   ];
   return (
-    <div className="flex flex-column-5" style={{ padding: "100px" }}>
+    <div
+      className="flex flex-column-5  gap-4 "
+      style={{ padding: "100px", paddingTop: "20px" }}
+    >
       <div className="max-w-sm  rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
@@ -397,6 +400,9 @@ function Card() {
           </div>
         </div>
       </div>
+
+      {/* next row
+       */}
 
       {/* <p style={{ padding: "100px" }}>
         Lorem Ipsum is simply dummy text of the printing and typesetting

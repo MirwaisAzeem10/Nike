@@ -13,6 +13,8 @@ import AboutHeading from "./AboutHeading";
 import ContactHeading from "./ContactHeading";
 import Pagination from "./Pagination";
 import CardHeading from "./CardHeading";
+import OurClients from "./OurClients";
+import OurHeading from "./OurHeading";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,9 +23,12 @@ ReactDOM.render(
     <AboutHeading />
     <CardHeading />
     <Card />
+    <OurHeading />
+    <OurClients />
     <ContactHeading />
+
     <Contact />
-    <Pagination />
+    {/* <Pagination /> */}
     <Footer />
   </React.StrictMode>,
   document.getElementById("root")
