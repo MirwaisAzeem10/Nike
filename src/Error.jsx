@@ -1,54 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { navigate } from "react";
-import Header from "./Header";
 
-const Contact = () => {
-  const navigate = useNavigate();
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-  let value, name;
-  const postUserData = (event) => {
-    name = event.target.name;
-    value = event.target.value;
-
-    setUserData({ ...userData, [name]: value });
-  };
-
-  const submitData = async (event) => {
-    event.preventDefault();
-    const { name, email, password } = userData;
-
-    if (name && email && password) {
-      const res = fetch(
-        "https://tailwimd-form-default-rtdb.firebaseio.com/userDataRecord.json",
-        {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify({
-            name,
-            email,
-            password,
-          }),
-        }
-      );
-
-      if (res) {
-        setUserData({
-          name,
-          email,
-          password,
-        });
-        alert("Data Stored");
-      } else {
-        alert("Plz fill the data");
-      }
-    }
-  };
-
+function Error() {
   return (
     <>
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
@@ -153,75 +106,8 @@ const Contact = () => {
           </div>
         </div>
       </nav>
-      <div className="container mx-auto">
-        <img
-          src="/images/contact2.jpg"
-          alt=""
-          style={{ width: "100%", paddingTop: "50px" }}
-        />
-      </div>
-      <div className="container mx-auto py-20">
-        <form method="POST">
-          <div class="mb-6">
-            <label
-              for="name"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Your Name
-            </label>
-            <input
-              value={userData.name}
-              onChange={postUserData}
-              type="text"
-              name="name"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              placeholder="Enter Your Name"
-              required=""
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Your email
-            </label>
-            <input
-              value={userData.email}
-              onChange={postUserData}
-              type="email"
-              name="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              placeholder="name@flowbite.com"
-              required=""
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Your password
-            </label>
-            <input
-              value={userData.password}
-              onChange={postUserData}
-              type="password"
-              name="password"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              required=""
-            />
-          </div>
-
-          <button
-            // onClick={() => navigate("/ThankYou")}
-            onClick={submitData}
-            type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Register new account
-          </button>
-        </form>
+      <div style={{ width: "100%", height: "100%" }}>
+        <img src="/images/Error20.jpeg" alt="" />
       </div>
       <footer className="bg-gray-800 ">
         <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
@@ -390,6 +276,6 @@ const Contact = () => {
       </footer>
     </>
   );
-};
+}
 
-export default Contact;
+export default Error;

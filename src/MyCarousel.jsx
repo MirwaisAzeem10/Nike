@@ -89,15 +89,12 @@ function MyCarousel() {
       {/* <iframe
         width="100%"
         height="500"
-        src="https://youtu.be/9Go8eHkJWbk"
-      ></iframe> */}
-      <iframe
-        width="100%"
-        height="500"
         src="https://www.youtube.com/embed/9Go8eHkJWbk"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
+      */}
+      <img src="/images/Nike3.jpg" style={{ height: "100%" }} />
     </div>
   );
 }

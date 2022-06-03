@@ -7,45 +7,48 @@ import "./OurClients.css";
 
 function OurClients() {
   return (
-    <OwlCarousel
-      className="owl-theme"
-      loop
-      margin={10}
-      nav
-      style={{ marginLeft: "198px" }}
-    >
-      <div className="item">
-        <img src="/images/disney.png" alt="" style={{ width: "100px" }} />
-      </div>
+    <div className="container">
+      <OwlCarousel
+        className="owl-theme"
+        loop
+        margin={12}
+        nav
+        items={6}
+        style={{ marginLeft: "198px" }}
+      >
+        <div className="item">
+          <img src="/images/disney.png" alt="" style={{ width: "100px" }} />
+        </div>
 
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-      <div className="item">
-        <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
-      </div>
-    </OwlCarousel>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/boss.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/gucci.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "100px" }} />
+        </div>
+        <div className="item">
+          <img src="/images/addidas.png" alt="" style={{ width: "90px" }} />
+        </div>
+      </OwlCarousel>
+    </div>
   );
 }
 

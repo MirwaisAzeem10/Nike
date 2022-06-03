@@ -3,33 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./Header";
-import MyCarousel from "./MyCarousel";
-import Card from "./Card";
-import "flowbite";
-import Footer from "./Footer";
-import Contact from "./Contact";
-import AboutHeading from "./AboutHeading";
-import ContactHeading from "./ContactHeading";
-import Pagination from "./Pagination";
-import CardHeading from "./CardHeading";
-import OurClients from "./OurClients";
-import OurHeading from "./OurHeading";
+// import Header from "./Header";
+// import MyCarousel from "./MyCarousel";
+// import Card from "./Card";
+// import "flowbite";
+// import Footer from "./Footer";
+// import Contact from "./Contact";
+// import AboutHeading from "./AboutHeading";
+// import ContactHeading from "./ContactHeading";
+// import Pagination from "./Pagination";
+// import CardHeading from "./CardHeading";
+// import OurClients from "./OurClients";
+// import OurHeading from "./OurHeading";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <MyCarousel />
-    <AboutHeading />
-    <CardHeading />
-    <Card />
-    <OurHeading />
-    <OurClients />
-    <ContactHeading />
-
-    <Contact />
-    {/* <Pagination /> */}
-    <Footer />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

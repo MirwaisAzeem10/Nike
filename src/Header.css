@@ -1,0 +1,8 @@
+.my-btn:hover {
+  background-color: white;
+  width: 146px;
+  height: 33px;
+  text-align: center;
+  padding-top: 3px;
+  color: black;
+}

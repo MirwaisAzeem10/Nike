@@ -10,7 +10,7 @@ function ContactHeading() {
         fontFamily: "sans-serif",
         fontWeight: "bold",
         fontSize: "revert",
-        paddingTop: "120px",
+        paddingTop: "65px",
       }}
     >
       Contact Us

@@ -1,7 +1,7 @@
 import React from "react";
 function Footer() {
   return (
-    <footer className="bg-gray-800">
+    <footer className="bg-gray-800 ">
       <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>
           <img
@@ -20,17 +20,17 @@ function Footer() {
           <ul className="text-gray-300">
             <li className="mb-4">
               <a href="#" className="hover:underline">
+                Home
+              </a>
+            </li>
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 About
               </a>
             </li>
             <li className="mb-4">
               <a href="#" className="hover:underline">
-                Contact
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#" className="hover:underline">
-                Facebook
+                Services
               </a>
             </li>
             <a href="#" className="hover:underline"></a>
