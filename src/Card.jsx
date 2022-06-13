@@ -1,6 +1,7 @@
 import React from "react";
-import { navigate } from "react";
+import { useNavigate } from "react-router-dom";
 function Card() {
+  const navigate = useNavigate();
   const data = [
     {
       name: "Nike Free soft Shoe Super Model",

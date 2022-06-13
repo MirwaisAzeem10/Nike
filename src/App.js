@@ -18,6 +18,7 @@ import OurClients from "./OurClients";
 import OurHeading from "./OurHeading";
 import ThankYou from "./ThankYou";
 import Error from "./Error";
+import Table from "./Table";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/CardHeading" element={<CardHeading />} />
         <Route path="/ThankYou" element={<ThankYou />} />
+        <Route path="/User" element={<Table />} />
         <Route path="*" element={<Error />} />
 
         {/* <Redirect to="/thankyou" element={ThankYou} /> */}

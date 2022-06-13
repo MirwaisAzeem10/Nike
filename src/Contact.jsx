@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { navigate } from "react";
 import Header from "./Header";
+import { storage } from "./firebase";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -9,20 +9,30 @@ const Contact = () => {
     name: "",
     email: "",
     password: "",
+    file: null,
+    fileType: "image",
   });
   let value, name;
   const postUserData = (event) => {
-    name = event.target.name;
-    value = event.target.value;
-
-    setUserData({ ...userData, [name]: value });
+    console.log(event.target.files);
+    setUserData({
+      ...userData,
+      [event.target.name]:
+        event.target.name === "file"
+          ? event.target.files[0]
+          : event.target.value,
+    });
   };
 
   const submitData = async (event) => {
     event.preventDefault();
-    const { name, email, password } = userData;
+    const { name, email, password, file, fileType } = userData;
+    console.log({ name, email, password, file });
+    if (name && email && password && file && fileType) {
+      const imageRef = storage.ref(`/images/${name}-${Math.random() * 10000}`);
+      await imageRef.put(file);
+      const savedFile = await imageRef.getDownloadURL();
 
-    if (name && email && password) {
       const res = fetch(
         "https://tailwimd-form-default-rtdb.firebaseio.com/userDataRecord.json",
         {
@@ -32,17 +42,22 @@ const Contact = () => {
             name,
             email,
             password,
+            fileUrl: savedFile,
+            fileUrl: fileType,
           }),
         }
       );
 
       if (res) {
         setUserData({
-          name,
-          email,
-          password,
+          name: "",
+          email: "",
+          password: "",
+          file: null,
+          fileUrl: fileType,
         });
         alert("Data Stored");
+        navigate("/ThankYou");
       } else {
         alert("Plz fill the data");
       }
@@ -211,6 +226,28 @@ const Contact = () => {
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
               required=""
             />
+          </div>
+
+          <label for="cars">Select One</label>
+
+          <select
+            value={userData.fileType}
+            onChange={postUserData}
+            name="fileType"
+          >
+            <option value="image">Images</option>
+            <option value="video">Videos</option>
+          </select>
+
+          <div class="mb-6">
+            <label
+              for="password"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Insert Your File
+            </label>
+
+            <input name="file" type="file" onChange={postUserData} />
           </div>
 
           <button

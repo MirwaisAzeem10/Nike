@@ -60,7 +60,7 @@ const Header = (cart, setCart, decrementCartQty, incrementCartQty, data) => {
               <li>
                 <a
                   onClick={() => navigate("/")}
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white cursor-pointer"
                   aria-current="page"
                 >
                   Home
@@ -69,7 +69,7 @@ const Header = (cart, setCart, decrementCartQty, incrementCartQty, data) => {
               <li>
                 <a
                   onClick={() => navigate("/MyCarousel")}
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  cursor-pointer"
                 >
                   About
                 </a>
@@ -77,7 +77,7 @@ const Header = (cart, setCart, decrementCartQty, incrementCartQty, data) => {
               <li>
                 <a
                   onClick={() => navigate("/Card")}
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  cursor-pointer"
                 >
                   Services
                 </a>
@@ -85,9 +85,17 @@ const Header = (cart, setCart, decrementCartQty, incrementCartQty, data) => {
               <li>
                 <a
                   onClick={() => navigate("/Contact")}
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => navigate("/User")}
+                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  cursor-pointer"
+                >
+                  Table
                 </a>
               </li>
               <li
@@ -826,17 +834,29 @@ const Header = (cart, setCart, decrementCartQty, incrementCartQty, data) => {
             </h2>
             <ul className="text-gray-300">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a
+                  href="#"
+                  className="hover:underline"
+                  onClick={() => navigate("/Header")}
+                >
                   Home
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a
+                  href="#"
+                  className="hover:underline"
+                  onClick={() => navigate("/MyCarousel")}
+                >
                   About
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a
+                  href="#"
+                  className="hover:underline"
+                  onClick={() => navigate("/Card")}
+                >
                   Services
                 </a>
               </li>
